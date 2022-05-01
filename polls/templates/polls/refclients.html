@@ -1,0 +1,42 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <body>
+        {% if refclient_list %}
+            <div class="table-wrapper">
+                <h2></h2>
+                <table class="fl-table">
+                    <thead class="responsive-table">
+                        <tr class="table-header">
+                            <th class="col col-1">Id</th>
+                            <th class="col col-2">Client</th>
+                            <th class="col col-3">Référence client</th>
+                        </tr>
+                    </thead>
+
+                {% for r in refclient_list %}
+                    <tbody>
+                        <tr class="table-row">
+
+                            <td>{{ r.id }}</td>
+                            <td>{{ r.id_client }}</td>
+                            <td>{{ r.ref_client }}</td>
+
+                            <td><a href="{% url 'polls:refclient_update' r.id %}">Update</a></td>
+                            <td><a href="{% url 'polls:refclient_delete' r.id %}">Delete</a></td>
+                        </tr>
+
+                    </tbody>
+                {% endfor %}
+
+                </table>
+            </div>
+
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+    </body>
+                <a  href="{% url 'polls:refclient_create' %}">
+    Nouvelle référence client
+    </a>
+{% endblock %}

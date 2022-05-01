@@ -1,0 +1,15 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+
+<h1>Suppression facture</h1>
+
+<p>Etes-vous sûr de vouloir supprimer la facture : {{ facture }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+  <input type="submit" onclick="window.location='{% url 'polls:facture' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}

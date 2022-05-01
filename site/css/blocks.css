@@ -1,0 +1,77 @@
+
+/* This is a partial blocks.css, you need to add more rules
+   to this file to complete the assignment.  Do not add any CSS
+   styling to the original index.htm / start.htm */
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Here is one of many  CSS rules you will need... */
+#one {
+    border-color: red;
+    border-width:5px;
+    border-style:solid;
+    margin:5px;
+    padding:5px;
+    width:25%;
+    /*height:25%;*/
+    top:0px;
+    right:0px;
+    position:absolute;
+}
+#two {
+    border-color: orange;
+    border-width:5px;
+    border-style:solid;
+    margin:5px;
+    padding:5px;
+    width:25%;
+    /*height:25%;*/
+    top:0px;
+    left:0px;
+    position:absolute;
+}
+#three {
+    border-color: green;
+    border-width:5px;
+    border-style:solid;
+    margin:5px;
+    padding:5px;
+    width:25%;
+    height:25%;
+    bottom:0px;
+    left:0px;
+    position:absolute;
+}
+#four {
+    border-color: yellow;
+    border-width:5px;
+    border-style:solid;
+    margin:5px;
+    padding:5px;
+    width:25%;
+    height:25%;
+    bottom:0px;
+    right:0px;
+    position:absolute;
+}
+#link {
+    border-width:5px;
+    /*position: center;*/
+    right:50%;
+    /*background-color: #2f418e;*/
+    position:absolute;
+    font-size: 18px;
+    color:yellow;
+    background-color: black;
+}
+/*#link:hover {*/
+/*    border-width:5px;*/
+    /*position: center;*/
+/*    right:50%;*/
+
+/*    position:absolute;*/
+/*    font-size: 18px;*/
+/*    color:red;*/
+/*}*/

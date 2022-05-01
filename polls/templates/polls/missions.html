@@ -1,0 +1,34 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <body>
+        {% if mission_list %}
+            <div class="table-wrapper">
+                <h2></h2>
+                <table class="fl-table">
+                    <thead class="responsive-table">
+                        <tr class="table-header">
+                            <th class="col col-1">Id</th>
+                            <th class="col col-2">Mission</th>
+                        </tr>
+                    </thead>
+                {% for m in mission_list %}
+                    <tbody>
+                        <tr class="table-row">
+                            <td>{{ m.id }}</td>
+                            <td>{{ m.type_mission }}</td>
+                            <td><a href="{% url 'polls:mission_update' m.id %}">Modifier</a></td>
+                            <td><a href="{% url 'polls:mission_delete' m.id %}">Supprimer</a></td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+                </table>
+            </div>
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+    </body>
+                <a  href="{% url 'polls:mission_create' %}">
+    Nouvelle mission
+    </a>
+{% endblock %}

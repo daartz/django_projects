@@ -1,0 +1,15 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+
+<h1>Suppression référence client</h1>
+
+<p>Etes-vous sûr de vouloir supprimer la référence client : {{ refclient }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+  <input type="submit" onclick="window.location='{% url 'polls:refclient' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+
+<h1>Suppression statut</h1>
+
+<p>Etes-vous sûr de vouloir supprimer le statut : {{ statut }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+  <input type="submit" onclick="window.location='{% url 'polls:statut' %}' ; return false;" value="Cancel">
+</form>
+
+{% endblock %}
